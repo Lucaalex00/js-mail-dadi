@@ -17,41 +17,27 @@ HTML ELEMENTS
 
 let mail_list = ['ciao@gmail.com', 'only@gmail.com', 'google@gmail.com'];
 let user_mail = prompt('Inserisci una email')
-mail_list.push(user_mail);
+let check = false;
+for (let i = 0; i < mail_list.length; i++) { //crea un ciclo for con una variabile i che cresce ad ogni ciclo di 1
+    let mailElement = mail_list[i]; //crea una variabile con valore di i che ad ogni ciclo cambia di valore
+    console.log(mailElement); //crea un console log che stampi OGNI CICLO il valore che cambia della mail_list
 
-for (let i = 0; i < mail_list.length; i++) {
-    let mailElement = mail_list[i];
-    console.log(mailElement);
-
-    if (user_mail != mailElement) {
-        console.log('User has Joined');
-
-    } else {
-        console.log('Access denied')
+    if (user_mail == mailElement) { // FAI UN CONTROLLO : se l'email inserita dall'utente è presente nella lista
+        check = true; //cambia il valore di check in TRUE
     }
-
 }
-
-/* if (user_mail != mail_list && verified_mail == mail_list) {
-    console.log('User has Joined')
-    mail_list.push(verified_mail)
-    console.log(mail_list)
-} else {
-    console.log('Access denied')
-} */
-
-// prima del ciclo creo una variabile check=false
-
-
-
-
+if (check == true) { //SE IL VALORE DI CHECK è **TRUE**
+    console.log('User has Joined'); //STAMPA user has joined
+} else { //SENNO'
+    console.log('Access Denied'); //STAMPA access denied
+}
 
 //BONUS
 let email_output = document.querySelector('.email_output')
-let card_c = document.getElementById('card_content')
-let input = document.getElementById('input').value
+let input = document.getElementById('input');
 document.getElementById('btn_submit').addEventListener('click', function () {
-    email_output.innerHTML = `la tua email è ${input}`
+    email_output.innerHTML = `la tua email è ${input.value}`
+    console.log(input.value)
 })
 
 
@@ -75,3 +61,27 @@ if (userNumber > pcNumber) {
     document.writeln(`C'è stata una parità (${pcNumber} - ${userNumber})`);
 }
 
+
+
+
+
+
+let container = document.querySelector('.contenitore') // container è un Node
+
+let paragraph = 'ciao' // aragraph è una stringa
+
+
+// .append() . appendChild() sono metodi dei Node
+
+let par = document.createElement('p') // Node
+par.innerText = "ciaone";
+par.className = "text-blue";
+
+container.append(par);
+
+
+// come posso usare una stringa? 
+container.innerHTML += "miniciao";
+container.innerHTML += "<h1>megaciao</h1>";
+
+console.log(container)
