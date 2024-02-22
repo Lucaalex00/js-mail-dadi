@@ -14,19 +14,46 @@ HTML ELEMENTS
 
 
 //MAIL EX
-/* 
-let mail_list = [];
-let true_mail = prompt('Inserisci una email (try with ciao@123.it');
-let false_mail = 'ciao@123.it'
-mail_list.push(true_mail);
-if (true_mail == mail_list && false_mail != mail_list) {
+
+let mail_list = ['ciao@gmail.com', 'only@gmail.com', 'google@gmail.com'];
+let user_mail = prompt('Inserisci una email')
+mail_list.push(user_mail);
+
+for (let i = 0; i < mail_list.length; i++) {
+    let mailElement = mail_list[i];
+    console.log(mailElement);
+
+    if (user_mail != mailElement) {
+        console.log('User has Joined');
+
+    } else {
+        console.log('Access denied')
+    }
+
+}
+
+/* if (user_mail != mail_list && verified_mail == mail_list) {
     console.log('User has Joined')
-    mail_list.push(false_mail)
+    mail_list.push(verified_mail)
     console.log(mail_list)
 } else {
     console.log('Access denied')
-}
- */
+} */
+
+// prima del ciclo creo una variabile check=false
+
+
+
+
+
+//BONUS
+let email_output = document.querySelector('.email_output')
+let card_c = document.getElementById('card_content')
+let input = document.getElementById('input').value
+document.getElementById('btn_submit').addEventListener('click', function () {
+    email_output.innerHTML = `la tua email è ${input}`
+})
+
 
 
 
@@ -47,3 +74,4 @@ if (userNumber > pcNumber) {
     console.log("PARITA'");
     document.writeln(`C'è stata una parità (${pcNumber} - ${userNumber})`);
 }
+
