@@ -18,7 +18,7 @@ Usiamo un input e un bottone per inserire la mail e poi mostriamo i risultati in
 
 # Description Mail
 - Utilizzando un prompt, chiedi all'utente una email e salvala in una variabile "MAIL"
-- Controlla se in una "ARRAY_MAIL" è presente quella mail.
+- Controlla se in una "mail_list" è presente quella mail.
     SE si, stampa "l'utente ha eseguito l'accesso"
     SENNO' stampa " Accesso Negato"
 
